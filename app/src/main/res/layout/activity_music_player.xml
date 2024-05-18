@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bossLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MusicPlayerActivity"
+    tools:ignore="ExtraText">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="28dp"
+            android:ellipsize="marquee"
+            android:padding="28dp"
+            android:singleLine="true"
+            android:text="@string/title_of_the_song"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:padding="20dp"
+            android:src="@drawable/icon"
+            tools:ignore="ImageContrastCheck" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:progressTint="#D61CA7" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="@dimen/_254sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="@dimen/_125sdp"
+            android:layout_marginBottom="20dp"
+            android:text="0:00"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="0:00"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageView
+            android:id="@+id/repeat"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_79sdp"
+
+
+            android:contentDescription="@string/myresource"
+            android:src="@drawable/baseline_repeat_24" />
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_79sdp"
+
+            android:contentDescription="@string/todo"
+            android:src="@drawable/baseline_skip_previous_24" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_79sdp"
+            android:src="@drawable/baseline_play_circle_24" />
+
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_79sdp"
+            android:layout_marginEnd="@dimen/cardview_compat_inset_shadow"
+            android:src="@drawable/baseline_skip_next_24" />
+
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_79sdp"
+            android:src="@drawable/shuffle" />
+    </LinearLayout>q
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
